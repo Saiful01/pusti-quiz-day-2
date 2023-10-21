@@ -1,0 +1,310 @@
+@font-face {
+    font-family: 'Hind Siliguri';
+    src: url('/font/HindSiliguri-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+body {
+    font-family: 'Hind Siliguri', sans-serif !important;
+    font-weight: bold;
+}
+
+.icon-opacity {
+    opacity: 0.5;
+}
+
+
+#quiz input {
+    width: 400px;
+}
+
+.selected-answer {
+    background: darkred;
+    color: white;
+}
+
+
+
+.answer-icon {
+    font-size: 18px;
+    margin-left: 5px;
+}
+.correct-icon::before {
+    content: '\2713'; /* Checkmark icon */
+    color: darkred;
+}
+.incorrect-icon::before {
+    content: '\2717'; /* Cross icon */
+    color: red;
+}
+
+.Custom_Cancel {
+    font-size: 10px;
+}
+
+
+div#social-links ul li {
+    display: inline-block;
+}
+div#social-links ul li a {
+
+    font-size: 30px;
+    color: #0866FF;
+
+
+
+}
+
+/* Styles for desktop screens (e.g., screens wider than 768px) */
+@media (min-width: 769px) {
+    .desktop-background {
+        background: url('../img/header.png') center;
+        height: 166px;
+    }
+    .desktop-background1 {
+        background: url('../img/landing-page.jpg') center;
+        height: 1377px;
+
+    }
+    .desktop-background2 {
+        background: url('../img/rules.png') center;
+        height: 577px;
+
+
+
+    }
+    .desktop-background3 {
+        background: url('../img/certificate/quiz-bg.png') center;
+        background-size: cover;
+        height: 900px;
+
+
+    }
+    .desktop-background-c {
+        background: url('../img/certificate-bg.jpg') center;
+        background-size: cover;
+        height: 720px;
+        margin-top: 0px;
+
+    }
+    .quiz {
+        color: white !important;
+        margin-top: -20px;
+        padding-bottom: 150px;
+
+    }
+    .quiz input{
+        margin-top: 10px !important;
+    }
+
+    input::placeholder {
+        font-size: 14px !important;
+    }
+    .header-text{
+        padding-top: 50px;
+    }
+    .quiz-header {
+        font-size: 15px;
+
+    }
+    /* Styling for all answers */
+    .red-text {
+        padding-top: 17px;
+        width: 200px;
+        height: 70px;
+        background: white;
+        color: darkred;
+
+        margin-top: 5px;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 15px;
+    }
+    .selected-answer {
+        background: darkred;
+        color: white;
+    }
+    .correct-answer {
+        background: #188351;
+        color: white;
+    }
+
+    .btn-default {
+        width: 150px;
+        background: white;
+        color: black;
+        font-size: 14px;
+    }
+    .btn-default1 {
+        width: 150px;
+        background: white;
+        color: red;
+        font-size: 14px;
+    }
+    .btn-default:hover {
+        width: 150px;
+        background: #188351;
+        color: white;
+    }
+    .btn-default1:hover {
+        width: 150px;
+        background: #188351;
+        color: white;
+    }
+    .c-name {
+        margin-top: 500px;
+        margin-left: 500px;
+        color: white;
+
+    }
+    div#social-links {
+        margin: -23px 36px;
+        max-width: 1px;
+        color: white;
+    }
+    .btn-img {
+        margin-top: 1120px;
+        padding:0;
+
+    }
+    .icon {
+        position: absolute;
+        margin-top: -120px;
+    }
+    .mobile {
+        display: none;
+    }
+    .desktop {
+        display: block;
+    }
+}
+
+/* Styles for mobile screens (e.g., screens 768px or narrower) */
+@media (max-width: 768px) {
+    .mobile-background {
+        background: url('../img/header.png') center;
+        background-size: cover;
+        height:120px;
+    }
+    .mobile-background1 {
+        background: url('../img/landing-page.jpg') center;
+        background-size: cover;
+        height:800px;
+
+    }
+    .mobile-background2 {
+        background: url('../img/rules.png') center;
+        background-size: cover;
+        height: 300px;
+        margin-top: 0px;
+
+    }
+    .mobile-background3 {
+        background: url('../img/certificate/quiz-bg.png') center;
+        background-size: cover;
+        height: 230px;
+        margin-top: 0px;
+
+    }
+    .mobile-background-c {
+        background: url('../img/certificate-bg.jpg') center;
+        background-size: cover;
+        height: 500px;
+        margin-top: 0px;
+
+    }
+    .quiz {
+        color: white !important;
+        padding-top: -94px;
+        padding-bottom: 50px;
+
+    }
+    .quiz input{
+        margin-top: 10px !important;
+    }
+
+    input::placeholder {
+        font-size: 12px !important;
+    }
+    .header-text{
+        padding-top: 50px;
+    }
+    .quiz-header {
+        font-size: 13px;
+    }
+    /* Styling for all answers */
+    .red-text {
+        padding-top: 17px;
+        width: 135px;
+        height: 70px;
+        background: white;
+        color: darkred;
+
+        margin-top: 5px;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 15px;
+    }
+    .selected-answer {
+        background: darkred;
+        color: white;
+    }
+    .correct-answer {
+        background: #188351;
+        color: white;
+    }
+
+    .btn-default {
+        width: 120px;
+        background: white;
+        color: black;
+        font-size: 12px;
+
+    }
+    .btn-default1 {
+        width: 120px;
+        background: white;
+        color: red;
+        font-size: 14px;
+        margin-top: 24px;
+    }
+    .btn-default:hover {
+        width: 120px;
+        background: #188351;
+        color: white;
+    }
+    .btn-default1:hover {
+        width: 120px;
+        background: #188351;
+        color: white;
+    }
+    .c-name {
+        margin-top: 120px;
+        margin-left: 136px;
+        color: white;
+
+    }
+    div#social-links {
+        margin: 0px 0px;
+        max-width: 1px;
+        color: white;
+    }
+    .btn-img {
+        margin-top: 650px;
+        height: 100px;
+        padding:0;
+
+    }
+    .icon {
+        margin-left: 2px;
+        position: absolute;
+        margin-top: -82px;
+        width: 70px;
+    }
+    .mobile {
+        display: block;
+    }
+    .desktop {
+        display: none;
+    }
+}
