@@ -30,6 +30,28 @@
                 </div>
             </div>
         </div>
+        <div class="row" style="background: #FFFFFF;">
+            <div class="col-md-6 mx-auto">
+                <div class="row">
+
+                        <div class="col-md-3">
+
+
+                        </div>
+
+
+                    <div class="col-md-3 ">
+                        <h6 class="text-danger day2" ></h6>
+                    </div>
+                    <div class="col-md-3 ">
+                        <h6 class="text-danger day3" ></h6>
+                    </div>
+                    <div class="col-md-3 ">
+                        <h6 class="text-danger day4" ></h6>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="container-fluid mobile-background1 mobile">
         <div class="row">
@@ -53,6 +75,28 @@
                     </div>
                     <div class="col-md-3 col-3 icon-opacity">
                         <img src="/img/icon-4.png"class="icon" >
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="background: #FFFFFF; height: 50px; opacity: 0.7" >
+            <div class="col-md-6 col-12 mx-auto">
+                <div class="row">
+                    <div class="col-md-3 col-3">
+
+
+                    </div>
+                    <div class="col-md-3 col-3">
+
+
+                    </div>
+
+
+                    <div class="col-md-3 col-3 ">
+                        <span style="font-size: 10px"  class="text-danger " id="day3"></span>
+                    </div>
+                    <div class="col-md-3 col-3 ">
+                        <span style="font-size: 10px"  class="text-danger " id="day4"></span>
                     </div>
                 </div>
             </div>
@@ -158,5 +202,144 @@
             <!-- Content for mobile -->
         </div>
     </div>
+
+
+
+    <script>
+        // Set the date we're counting down to
+        var countDownDate2 = new Date("Oct 26, 2023 20:00:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate2 - now;
+
+            // Time calculations for days, hours, minutes, and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Use getElementsByClassName to get the collection of elements
+            var elements = document.getElementsByClassName("day3");
+
+            // Check if there are elements with the class
+            if (elements.length > 0) {
+                // Update the content of the first element in the collection (or use a loop to update all if needed)
+                elements[0].innerHTML = days + "d " + hours + "h "
+                    + minutes + "m " + seconds + "s ";
+
+                // If the count down is finished, write some text
+                if (distance < 0) {
+                    clearInterval(x);
+                    elements[0].innerHTML = "EXPIRED";
+                }
+            }
+        }, 1000);
+    </script>
+
+    <script>
+        // Set the date we're counting down to
+        var countDownDate3 = new Date("Oct 29, 2023 20:00:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate3 - now;
+
+            // Time calculations for days, hours, minutes, and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Use getElementsByClassName to get the collection of elements
+            var elements = document.getElementsByClassName("day4");
+
+            // Check if there are elements with the class
+            if (elements.length > 0) {
+                // Update the content of the first element in the collection (or use a loop to update all if needed)
+                elements[0].innerHTML = days + "d " + hours + "h "
+                    + minutes + "m " + seconds + "s ";
+
+                // If the count down is finished, write some text
+                if (distance < 0) {
+                    clearInterval(x);
+                    elements[0].innerHTML = "EXPIRED";
+                }
+            }
+        }, 1000);
+    </script>
+
+    <script>
+        // Set the date we're counting down to
+        var countDownDate5 = new Date("Oct 26, 2023 20:00:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate5 - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the element with id="demo"
+            document.getElementById("day3").innerHTML = days + "d " + hours + "h "
+                + minutes + "m " + seconds + "s ";
+
+            // If the count down is finished, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("day3").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+
+    <script>
+        // Set the date we're counting down to
+        var countDownDate6 = new Date("Oct 29, 2023 20:00:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate6 - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the element with id="demo"
+            document.getElementById("day4").innerHTML = days + "d " + hours + "h "
+                + minutes + "m " + seconds + "s ";
+
+            // If the count down is finished, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("day4").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+
 
 @endsection
