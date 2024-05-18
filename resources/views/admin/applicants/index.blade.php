@@ -32,10 +32,10 @@
                             {{ trans('cruds.applicant.fields.phone') }}
                         </th>
                         <th>
-                            {{ trans('cruds.applicant.fields.email') }}
+                            Total Marks
                         </th>
                         <th>
-                            Address
+                            Time
                         </th>
 
                         <th>
@@ -59,10 +59,10 @@
                                 {{ $applicant->phone ?? '' }}
                             </td>
                             <td>
-                                {{ $applicant->email ?? '' }}
+                                {{ $applicant->total_marks ?? '' }}
                             </td>
                             <td>
-                                {{ $applicant->gender ?? '' }}
+                                {{ $applicant->time ?? '' }}
                             </td>
 
                             <td>

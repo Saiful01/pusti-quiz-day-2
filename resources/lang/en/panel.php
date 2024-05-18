@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'site_title' => 'Pusti-Quiz',
+    'site_title' => 'Meril-ProthomAlo-Quiz',
 
 ];

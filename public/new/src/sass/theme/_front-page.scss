@@ -1,0 +1,359 @@
+.banner-area {
+    position: relative;
+    padding-top: 450px;
+    padding-bottom: 250px;
+
+    @media screen and (max-width: 1366px) {
+        padding-top: 250px;
+        padding-bottom: 150px;
+    }
+
+    @media screen and (max-width: 991px) {
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
+
+    @media screen and (max-width: 767px) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .banner-bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+
+        @media screen and (max-width: 1366px) {
+            position: relative;
+        }
+
+        @media screen and (max-width: 640px) {
+            position: absolute;
+        }
+
+        img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+
+            @media screen and (max-width: 1366px) {
+                object-fit: contain;
+            }
+
+            @media screen and (max-width: 640px) {
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+.with-common-bg {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .container {
+        position: relative;
+        z-index: 2;
+    }
+
+    &:before,
+    &:after {
+        position: absolute;
+        content: "";
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    &:before {
+        height: 413px;
+        width: 812px;
+        top: 0;
+        right: 0;
+        background-position: top right;
+        background-image: url('../img/top-right-shape.png');
+
+        @media screen and (max-width: 1366px) {
+            height: 200px;
+            width: 400px;
+        }
+
+        @media screen and (max-width: 991px) {
+            height: 100px;
+            width: 250px;
+        }
+
+        @media screen and (max-width: 767px) {
+            height: 70px;
+            width: 100px;
+        }
+    }
+
+    &:after {
+        height: 233px;
+        width: 634px;
+        bottom: 0;
+        left: 0;
+        background-image: url('../img/left-bottom-shape.png');
+        background-position: bottom left;
+
+        @media screen and (max-width: 1366px) {
+            height: 100px;
+            width: 300px;
+        }
+
+        @media screen and (max-width: 767px) {
+            height: 70px;
+            width: 100px;
+        }
+    }
+}
+
+.section-logo-wrap {
+    .img-fluid {        
+        @media screen and (max-width: 991px) {
+            max-width: 150px;
+        }
+    }
+}
+
+.setp-forms-area {
+    position: relative;
+    padding: 100px 0 250px;
+
+    @media screen and (max-width: 767px) {
+        padding: 100px 0 150px;
+    }
+
+    @media screen and (max-width: 767px) {
+        padding: 100px 0 100px;
+    }
+
+    .setp-forms-wrapper {
+        max-width: 840px;
+        margin: auto;
+    }
+
+    .setp-form {
+        margin-bottom: 20px;
+    }
+}
+
+.btn-ls-primary,
+.btn-primary-submit {
+    background-color: #034EA2 !important;
+    color: #ffffff !important;
+    font-size: 21px;
+    font-weight: 500;
+    border-radius: 10px;
+    padding: 10px 30px;
+    text-decoration: none !important;
+
+    &:hover,
+    &:focus {
+        background-color: #034EA2 !important;
+        color: #ffffff;
+    }
+}
+
+.max-w-840 {
+    max-width: 840px;
+}
+
+.py-100 {
+    padding: 100px 0;
+}
+
+.form-control {
+    padding: 0.85rem 1rem;
+    font-size: 1.25rem;
+
+    @media screen and (max-width: 640px) {
+        font-size: 1rem;
+    }
+}
+
+.cs-radio-box-wrap {
+    .cs-radio-heading {
+        background-color: #034EA2;
+        color: #ffffff;
+        font-size: 1.5rem;
+        font-weight: 600;
+        padding: 10px;
+        border-radius: 10px 10px 0 0;
+        margin-bottom: 5px;
+
+        @media screen and (max-width: 640px) {
+            font-size: 1.25rem;
+        }
+    }
+
+    .cs-radio-wrap {
+        padding: 10px 10px 0;
+        border-radius: 0 0 10px 10px;
+        border-left: 1px solid #034EA2;
+        border-bottom: 1px solid #034EA2;
+        border-right: 1px solid #034EA2;
+        
+        .cs-radio-row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -10px;
+        }
+
+        .cs-radio-col {
+            flex: 0 0 50%;
+            max-width: 50%;
+            padding: 0 10px;
+
+            @media screen and (max-width: 640px) {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+
+        .cs-radio-label {
+            width: 100%;
+            margin-bottom: 10px;
+
+            input {
+                display: none;
+
+                &:checked ~ .cs-radio-text {
+                    background-color: #188351;
+
+                    &:after {
+                        display: block;
+                    }
+                }
+            }
+
+            .cs-radio-text {
+                position: relative;
+                padding: 10px 40px 10px 10px;
+                background-color: #034EA2;
+                color: #ffffff;
+                font-size: 1rem;
+                display: block;
+
+                &:after {
+                    position: absolute;
+                    content: "";
+                    height: 20px;
+                    width: 20px;
+                    display: block;
+                    background-image: url('../img/checked.svg');
+                    background-repeat: no-repeat;
+                    top: 12px;
+                    right: 10px;
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.rules-area,
+.leader-board-area,
+.score-board-area {
+    position: relative;
+    padding: 100px 0 250px;
+
+    @media screen and (max-width: 767px) {
+        padding: 100px 0 150px;
+    }
+
+    @media screen and (max-width: 767px) {
+        padding: 100px 0 100px;
+    }
+}
+
+.cs-score-box-wrap {
+    .cs-score-heading {
+        background-color: #034EA2;
+        color: #ffffff;
+        font-size: 1.5rem;
+        font-weight: 600;
+        padding: 10px;
+        border-radius: 10px 10px 0 0;
+        margin-bottom: 5px;
+
+        @media screen and (max-width: 640px) {
+            font-size: 1.25rem;
+        }
+    }
+
+    .cs-score-wrap {
+        padding: 10px 10px 0;
+        border-radius: 0 0 10px 10px;
+        border-left: 1px solid #034EA2;
+        border-bottom: 1px solid #034EA2;
+        border-right: 1px solid #034EA2;
+    }
+}
+
+.cs-lb-box-wrap {
+    .cs-lb-heading {
+        background-color: #034EA2;
+        color: #ffffff;
+        font-size: 1.5rem;
+        font-weight: 600;
+        padding: 10px 15px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+
+    .cs-lb-row {
+        column-count: 2;
+        column-gap: 30px;
+
+        @media screen and (max-width: 640px) {
+            column-count: 1;
+        }
+
+        .cs-lb-text-wrap {
+            position: relative;
+            padding-right: 10px;
+            .cs-lb-text {
+                background-color: #034EA2;
+                color: #ffffff;
+                display: block;
+                font-size: 1rem;
+                padding: 10px 40px 10px 15px;
+                border-radius: 10px;
+            }
+
+            .cs-lb-position {
+                background-color: #fff;
+                border-radius: 50rem;
+                color: #000;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1rem;
+                height: 35px;
+                position: absolute;
+                right: -5px;
+                top: 4px;
+                width: 35px;
+            }
+        }
+    }
+}
+
+.rules-content-area {
+    ul,
+    ol {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .rules-heading {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+}

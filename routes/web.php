@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Artisan;
 
 
 Route::get('/', [Controller::class, 'home'])->name('home');
+Route::post('/form-submit', [Controller::class, 'formSubmit'])->name('form.submit');
+Route::get('/leaderboard/{id}', [Controller::class, 'leaderBoard'])->name('leaderBoard');
 Route::get('/certificate', [Controller::class, 'certificate'])->name('certificate');
 Route::get('/certificates/{value}', [Controller::class, 'urlRedirect'])->name('redirect.home');
 

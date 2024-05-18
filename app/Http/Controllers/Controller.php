@@ -7,10 +7,12 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\View;
 use Intervention\Image\Facades\Image;
 use Jorenvh\Share\Share;
+use Illuminate\Support\Facades\Schema;
 
 class Controller extends BaseController
 {
@@ -23,10 +25,258 @@ class Controller extends BaseController
         $pageUrl = "http://cookandconnect.pustihomechef.com/";
         $image = "/img/landing-page.png";
 
-        return view('frontend.index', compact('title', 'description', 'pageUrl', 'image'));
+
+        $questions = [
+            [
+                "id" => 1,
+                "question" => "বাংলাদেশের একমাত্র মিল্ক লোশন সমৃদ্ধ সাবান কোনটি?",
+                "options" => [
+                    "a" => "মেরিল মিল্ক সোপ",
+                    "b" => "লাক্স",
+                    "c" => "তিব্বত বডি সোপ",
+                    "d" => "স্যান্ডালিনা স্যান্ডাল সোপ"
+                ]
+            ],
+            [
+                "id" => 2,
+                "question" => "মেরিল প্রথম আলো পুরস্কার ২০২২-এ কে সেরা সংগীত শিল্পী (পুরুষ) পুরস্কার পেয়েছেন?",
+                "options" => [
+                    "a" => "ইমরান",
+                    "b" => "তাহসান খান",
+                    "c" => "এরফান মৃধা শিবলু",
+                    "d" => "প্রীতম হাসান"
+                ]
+            ],
+            [
+                "id" => 3,
+                "question" => "কোন চলচ্চিত্র সবচেয়ে বেশি অভিনেত্রী মেরিল প্রথম আলো পুরস্কার জয়লাভ করেছেন?",
+                "options" => [
+                    "a" => "শাবনূর",
+                    "b" => "ববিতা",
+                    "c" => "মৌসুমী",
+                    "d" => "পপি"
+                ]
+            ],
+            [
+                "id" => 4,
+                "question" => "১৯৯৮ - ২০০৫ পর্যন্ত কোন অনুষ্ঠানটি শ্রেষ্ঠ টিভি অনুষ্ঠানের পুরস্কার জিতেছে?",
+                "options" => [
+                    "a" => "আনন্দ ধারা",
+                    "b" => "ছায়াছন্দ",
+                    "c" => "ইত্যাদি",
+                    "d" => "হৃদয়ে মাটি ও মানুষ"
+                ]
+            ],
+            [
+                "id" => 5,
+                "question" => "মেরিল প্রথম আলো পুরস্কার ২০২১-এ কে আজীবন সম্মাননা পুরস্কার পেয়েছেন?",
+                "options" => [
+                    "a" => "রুনা লায়লা ও সাবিনা ইয়াসমিন",
+                    "b" => "সুভাষ দত্ত",
+                    "c" => "সৈয়দ আব্দুল হাদী",
+                    "d" => "ববিতা ও রোজিনা"
+                ]
+            ],
+            [
+                "id" => 6,
+                "question" => "মেরিল প্রথম আলো পুরস্কার ২০২২-এ উপস্থাপক কে ছিলেন?",
+                "options" => [
+                    "a" => "চঞ্চল চৌধুরী ও মোশাররফ করিম",
+                    "b" => "তাহসান খান ও প্রীতম হাসান",
+                    "c" => "আরেফিন শুভ ও সিয়াম আহমেদ",
+                    "d" => "সিয়াম আহমেদ ও প্রীতম হাসান"
+                ]
+            ],
+            [
+                "id" => 7,
+                "question" => "কত সালে প্রথম মেরিল প্রথম আলো পুরস্কার অনুষ্ঠানটি শুরু হয়?",
+                "options" => [
+                    "a" => "১৯৯২",
+                    "b" => "১৯৯৫",
+                    "c" => "১৯৯৮",
+                    "d" => "২০০১"
+                ]
+            ],
+            [
+                "id" => 8,
+                "question" => "মেরিল প্রথম আলো পুরস্কার ২০১৮ -এ সেরা নবাগত অভিনেতা পুরস্কার কে জয়লাভ করেন?",
+                "options" => [
+                    "a" => "শবনম বুবলী",
+                    "b" => "সিয়াম আহমেদ",
+                    "c" => "নাজিফা তুষি",
+                    "d" => "শবনম ফারিয়া"
+                ]
+            ],
+            [
+                "id" => 9,
+                "question" => "সেরা চলচ্চিত্র অভিনেতা বিভাগে কে সবচেয়ে বেশি পুরস্কার পেয়েছেন?",
+                "options" => [
+                    "a" => "শাকিব খান",
+                    "b" => "মান্না",
+                    "c" => "জাহিদ হাসান",
+                    "d" => "কাজী মারুফ"
+                ]
+            ],
+            [
+                "id" => 10,
+                "question" => "মেরিল প্রথম আলো পুরস্কার ২০২২-এ সেরা চলচ্চিত্র পরিচালক পুরস্কার কে পেয়েছেন?",
+                "options" => [
+                    "a" => "রায়হান রাফি",
+                    "b" => "মেজবাউর রহমান সুমন",
+                    "c" => "মালেক আফসারী",
+                    "d" => "হিমেল আশরাফ"
+                ]
+            ],
+            [
+                "id" => 11,
+                "question" => "সর্বাধিক টিভি অভিনেতা পুরস্কার কে পেয়েছেন?",
+                "options" => [
+                    "a" => "চঞ্চল চৌধুরী",
+                    "b" => "মোশাররফ করিম",
+                    "c" => "জাহিদ হাসান",
+                    "d" => "মাহফুজ আহমেদ"
+                ]
+            ],
+            [
+                "id" => 12,
+                "question" => "প্রথম আসরে কে শ্রেষ্ঠ চলচ্চিত্র অভিনেতা পুরস্কার পেয়েছেন?",
+                "options" => [
+                    "a" => "মান্না",
+                    "b" => "আমিন খান",
+                    "c" => "সালমান শাহ",
+                    "d" => "রিয়াজ"
+                ]
+            ],
+            [
+                "id" => 13,
+                "question" => "মেরিল প্রথম আলো পুরস্কার ২০২৩-এ কত তম আসর অনুষ্ঠিত হতে যাচ্ছে?",
+                "options" => [
+                    "a" => "২২",
+                    "b" => "২৩",
+                    "c" => "২৪",
+                    "d" => "২৫"
+                ]
+            ],
+            [
+                "id" => 14,
+                "question" => "মেরিল প্রথম আলো পুরস্কার ২০২২-এ সেরা নাট্য অভিনেতা পুরস্কার কে পেয়েছেন?",
+                "options" => [
+                    "a" => "তৌসিফ মাহবুব",
+                    "b" => "অ্যালেন শুভ্র",
+                    "c" => "আফরান নিশো",
+                    "d" => "জিয়াউল ফারুক অপূর্ব"
+                ]
+            ],
+            [
+                "id" => 15,
+                "question" => "মেরিল প্রথম আলো পুরস্কার ২০১৭-এ কোন নাট্য নির্দেশক পুরস্কার পেয়েছেন?",
+                "options" => [
+                    "a" => "মিজানুর রহমান আরিয়ান",
+                    "b" => "সাগর জাহান",
+                    "c" => "আশফাক নিপুণ",
+                    "d" => "কাজল আরেফিন অমি"
+                ]
+            ]
+        ];
+        // প্রথম প্রশ্নটি আলাদা করে রাখুন
+        $fixedQuestion = $questions[0];
+
+        // বাকি প্রশ্নগুলো থেকে ৪টি র‌্যান্ডম প্রশ্ন নির্বাচন করুন
+        $remainingQuestions = Arr::except($questions, [0]);
+        $randomQuestions = Arr::random($remainingQuestions, 4);
+
+        // প্রথম প্রশ্নটি সহ সব প্রশ্নগুলো একত্র করুন
+        $selectedQuestions = array_merge([$fixedQuestion], $randomQuestions);
+
+
+
+
+        return view('frontend.new_index', compact('title', 'description', 'pageUrl', 'image','selectedQuestions'));
 
     }
 
+    public function formSubmit(Request $request)
+    {
+        // সঠিক উত্তরগুলি সংরক্ষণ করা
+        $correctAnswers = [
+            1 => 'মেরিল মিল্ক সোপ',
+            2 => 'এরফান মৃধা শিবলু',
+            3 => 'শাবনূর',
+            4 => 'ইত্যাদি',
+            5 => 'রুনা লায়লা ও সাবিনা ইয়াসমিন',
+            6 => 'সিয়াম আহমেদ ও প্রীতম হাসান',
+            7 => '১৯৯২',
+            8 => 'শবনম ফারিয়া',
+            9 => 'শাকিব খান',
+            10 => 'মেজবাউর রহমান সুমন',
+            11 => 'মোশাররফ করিম',
+            12 => 'রিয়াজ',
+            13 => '২৫',
+            14 => 'আফরান নিশো',
+            15 => 'সাগর জাহান',
+        ];
+
+        $totalMarks = 0;
+        $responses = $request->all();
+        $answers = [];
+        $questionIds = [];
+
+        foreach ($correctAnswers as $questionId => $correctAnswer) {
+            $answerKey = (string)$questionId;
+            if (isset($responses[$answerKey]) && $responses[$answerKey] === $correctAnswer) {
+                $totalMarks += 10;
+            }
+            if (isset($responses[$answerKey])) {
+                $answers[] = $responses[$answerKey];
+                $questionIds[] = $questionId;
+            }
+        }
+
+        // Data save to database
+        $applicant = new Applicant();
+        $applicant->name = $request->input('name');
+        $applicant->phone = $request->input('mobile');
+        $applicant->total_marks = $totalMarks;
+        $applicant->time = $request->input('time_taken');
+
+        // Dynamically setting the answers and question IDs
+        for ($i = 0; $i < 5; $i++) {
+            if (isset($answers[$i])) {
+                $answerField = 'ans_' . ($i + 1);
+                $questionField = 'question_id_' . ($i + 1);
+                $applicant->$answerField = $answers[$i];
+                $applicant->$questionField = $questionIds[$i];
+            }
+        }
+
+       // return $applicant;
+
+        $applicant->save();
+
+        return redirect()->route('leaderBoard',$applicant->id );
+
+
+    }
+
+
+
+
+
+
+    public function leaderBoard($id)
+    {
+        if (!$id){
+            return redirect()->route('home');
+        }
+        $applicant= Applicant::find($id);
+
+        $leaders = Applicant::orderBy('total_marks', 'DESC')
+            ->orderBy('time', 'ASC')
+            ->take(10)
+            ->get();
+        return view('frontend.leader', compact('applicant', 'leaders'));
+
+    }
     public function urlRedirect($value)
     {
 
