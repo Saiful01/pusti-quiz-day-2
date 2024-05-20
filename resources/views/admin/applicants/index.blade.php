@@ -91,6 +91,7 @@
                         </tr>
                     @endforeach
                 </tbody>
+                {{$applicants->links('pagination::bootstrap-4')}}
             </table>
         </div>
     </div>

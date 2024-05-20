@@ -26,55 +26,10 @@
     </script>
 
     <script src="/custom_angular.js"></script>
-
-    <style>
-
-.with-common-bgs::before {
-    background-image: none;
-    background-position: 0 100%;
-    bottom: 0;
-    height: 233px;
-    left: 0;
-    width: 634px;
-}
-
-.with-common-bgss::after {
-    background-image: none;
-    background-position: 0 100%;
-    bottom: 0;
-    height: 233px;
-    left: 0;
-    width: 634px;
-}
-
-.with-common-bgsss::before {
-    background-image: none;
-    background-position: 0 100%;
-    bottom: 0;
-    height: 233px;
-    left: 0;
-    width: 634px;
-}
-
-.with-common-bgsss::after {
-    background-image: none;
-    background-position: 0 100%;
-    bottom: 0;
-    height: 233px;
-    left: 0;
-    width: 634px;
-}
-
-.text-md-start {
-        text-align: center !important;
-    }
-
-    </style>
-    
 </head>
 
 <body>
-<section class="banner-area with-common-bg  with-common-bgss " style="background-image: url('/new/assets/img/nm-bg.jpg');">
+<section class="banner-area with-common-bg" style="background-image: url('/new/assets/img/nm-bg.jpg');">
     <div class="container d-flex h-100 align-items-center">
         <div class="img-wrap max-w-840 mx-auto">
             <img src="/new/assets/img/fisrt-page-intro.png" alt="meril-prothomalo" class="img-fluid">
@@ -83,7 +38,7 @@
 </section>
 
 
-<section class="setp-forms-area with-common-bg with-common-bgsss" style="background-image: url('/new/assets/img/nm-bg.jpg');">
+<section class="setp-forms-area with-common-bg" style="background-image: url('/new/assets/img/nm-bg.jpg');">
     <div class="container">
         <div class="section-logo-wrap text-center text-md-start mb-5">
             <img src="/new/assets/img/meril-prothomalo-left-logo.png" alt="meril-prothomalo"
@@ -170,7 +125,7 @@
 
 
 <!-- Rules Start -->
-<section class="rules-area with-common-bg with-common-bgs" style="background-image: url('/new/assets/img/nm-bg.jpg');">
+<section class="rules-area with-common-bg" style="background-image: url('/new/assets/img/nm-bg.jpg');">
     <div class="container">
         <div class="section-logo-wrap text-center text-md-start mb-5">
             <img src="/new/assets/img/meril-prothomalo-left-logo.png" alt="meril-prothomalo"
@@ -178,7 +133,7 @@
         </div>
 
         <div class="rules-content-area max-w-840 mx-auto">
-              <h4 class="rules-heading font-tatsam-robi">wbqgvewjt</h4> 
+            <h4 class="rules-heading font-tatsam-robi">wbqgvewjt</h4>
 
             <ol class="font-tatsam-robi">
                 <li>GKRb e¨w³ GKvwaKevi AskMªnY Ki‡Z cvi‡eb|</li>
@@ -190,11 +145,8 @@
                 </li>
                 <li>‡Kvb cªKvi fyj Z_¨ cª`vb Ki‡j Zv evwZj e‡j MY¨ Kiv n‡e|</li>
                 <li>Kg mg‡q mwVK DËi w`‡Z cvi‡j weRqx nIqvi m¤¢vebv †ewk _vK‡e|</li>
-               <li>cªwZ‡hvwMZvq AskMªnY Kivi †kl mgq AvMvgx 22 †g, 2024 `ycyi 12Uv|</li>
-               <li>KyBR ‡Ljvi mgq Am`ycvq Aej¤^b Ki‡j Avcbvi Gw›U«wU evwZj e‡j MY¨ n‡e|</li>
-            </ol> 
-
-            <!--<img src="/new/assets/img/rules.png" alt="meril-prothomalo" class="img-fluid">-->
+                <li>cªwZ‡hvwMZvq AskMªnY Kivi †kl mgq AvMvgx 21 †g, 2024|</li>
+            </ol>
         </div>
     </div>
 </section>

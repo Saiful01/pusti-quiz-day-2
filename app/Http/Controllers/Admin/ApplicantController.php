@@ -21,7 +21,7 @@ class ApplicantController extends Controller
     {
         abort_if(Gate::denies('applicant_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $applicants = Applicant::with(['media'])->get();
+        $applicants = Applicant::with(['media'])->Orderby('created_at','DESC') ->paginate(50);
 
         return view('admin.applicants.index', compact('applicants'));
     }

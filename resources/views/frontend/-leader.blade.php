@@ -26,43 +26,13 @@
     </script>
 
     <script src="/custom_angular.js"></script>
-
-<style>
-
-.with-common-bgs::after {
-    background-image: none;
-    background-position: 0 100%;
-    bottom: 0;
-    height: 233px;
-    left: 0;
-    width: 634px;
-}
-
-
-
-.with-common-bgss::before {
-    background-image: none;
-    background-position: 0 100%;
-    bottom: 0;
-    height: 233px;
-    left: 0;
-    width: 634px;
-}
-
-.text-md-start {
-        text-align: center !important;
-    }
-
-
-    </style>
-
 </head>
 
 <body>
 
 
 <!-- Score Board S -->
-<section class="score-board-area with-common-bg with-common-bgs " style="background-image: url('/new/assets/img/nm-bg.jpg');">
+<section class="score-board-area with-common-bg" style="background-image: url('/new/assets/img/nm-bg.jpg');">
     <div class="container">
         <div class="section-logo-wrap text-center text-md-start mb-5">
             <img src="/new/assets/img/meril-prothomalo-left-logo.png" alt="meril-prothomalo"
@@ -95,7 +65,7 @@
 <!-- Score Board E -->
 
 <!-- Leader Board S -->
-<section class="leader-board-area with-common-bg with-common-bgss" style="background-image: url('/new/assets/img/nm-bg.jpg');">
+<section class="leader-board-area with-common-bg" style="background-image: url('/new/assets/img/nm-bg.jpg');">
     <div class="container">
         <div class="section-logo-wrap text-center text-md-start mb-5">
             <img src="/new/assets/img/meril-prothomalo-left-logo.png" alt="meril-prothomalo"
@@ -161,7 +131,7 @@
 
 <script>
     function shareOnFacebook() {
-        const url = "https://merilprothomaloquiz.com/"; // এখানে আপনার শেয়ার করতে চান এমন URL দিন
+        const url = "https://merilprothomalo.webaidsolution.com"; // এখানে আপনার শেয়ার করতে চান এমন URL দিন
         const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
         window.open(facebookShareUrl, 'facebook-share-dialog', 'width=800,height=600');
         return false;

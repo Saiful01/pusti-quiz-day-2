@@ -27,30 +27,18 @@ class Controller extends BaseController
 
 
         $questions = [
-
             [
                 "id" => 1,
-                "question" => "মেরিল প্রথম আলো পুরস্কার ২০২৩-এ কত তম আসর অনুষ্ঠিত হতে যাচ্ছে?",
+                "question" => "বাংলাদেশের একমাত্র মিল্ক লোশন সমৃদ্ধ সাবান কোনটি?",
                 "options" => [
-                    "a" => "২২",
-                    "b" => "২৩",
-                    "c" => "২৪",
-                    "d" => "২৫"
+                    "a" => "মেরিল মিল্ক সোপ",
+                    "b" => "লাক্স",
+                    "c" => "তিব্বত বডি সোপ",
+                    "d" => "স্যান্ডালিনা স্যান্ডাল সোপ"
                 ]
             ],
-
             [
                 "id" => 2,
-                "question" => "মেরিল প্রথম আলো পুরস্কারের ইতিহাসে সর্বোচ্চ মনোনয়ন পেয়েছেন কোন তারকা?",
-                "options" => [
-                    "a" => "শাকিব খান",
-                    "b" => "মোশাররফ করিম",
-                    "c" => "শাবনূর",
-                    "d" => "জাহিদ হাসান"
-                ]
-            ],
-            [
-                "id" => 3,
                 "question" => "মেরিল প্রথম আলো পুরস্কার ২০২২-এ কে সেরা সংগীত শিল্পী (পুরুষ) পুরস্কার পেয়েছেন?",
                 "options" => [
                     "a" => "ইমরান",
@@ -60,7 +48,7 @@ class Controller extends BaseController
                 ]
             ],
             [
-                "id" => 4,
+                "id" => 3,
                 "question" => "কোন চলচ্চিত্র সবচেয়ে বেশি অভিনেত্রী মেরিল প্রথম আলো পুরস্কার জয়লাভ করেছেন?",
                 "options" => [
                     "a" => "শাবনূর",
@@ -70,7 +58,7 @@ class Controller extends BaseController
                 ]
             ],
             [
-                "id" => 5,
+                "id" => 4,
                 "question" => "১৯৯৮ - ২০০৫ পর্যন্ত কোন অনুষ্ঠানটি শ্রেষ্ঠ টিভি অনুষ্ঠানের পুরস্কার জিতেছে?",
                 "options" => [
                     "a" => "আনন্দ ধারা",
@@ -80,7 +68,7 @@ class Controller extends BaseController
                 ]
             ],
             [
-                "id" => 6,
+                "id" => 5,
                 "question" => "মেরিল প্রথম আলো পুরস্কার ২০২১-এ কে আজীবন সম্মাননা পুরস্কার পেয়েছেন?",
                 "options" => [
                     "a" => "রুনা লায়লা ও সাবিনা ইয়াসমিন",
@@ -90,8 +78,8 @@ class Controller extends BaseController
                 ]
             ],
             [
-                "id" => 7,
-                "question" => "মেরিল প্রথম আলো পুরস্কার ২০২২-এ  উপস্থাপক কে ছিলেন?",
+                "id" => 6,
+                "question" => "মেরিল প্রথম আলো পুরস্কার ২০২২-এ উপস্থাপক কে ছিলেন?",
                 "options" => [
                     "a" => "চঞ্চল চৌধুরী ও মোশাররফ করিম",
                     "b" => "তাহসান খান ও প্রীতম হাসান",
@@ -100,7 +88,7 @@ class Controller extends BaseController
                 ]
             ],
             [
-                "id" => 8,
+                "id" => 7,
                 "question" => "কত সালে প্রথম মেরিল প্রথম আলো পুরস্কার অনুষ্ঠানটি শুরু হয়?",
                 "options" => [
                     "a" => "১৯৯২",
@@ -110,7 +98,7 @@ class Controller extends BaseController
                 ]
             ],
             [
-                "id" => 9,
+                "id" => 8,
                 "question" => "মেরিল প্রথম আলো পুরস্কার ২০১৮ -এ সেরা নবাগত অভিনেতা পুরস্কার কে জয়লাভ করেন?",
                 "options" => [
                     "a" => "শবনম বুবলী",
@@ -120,7 +108,7 @@ class Controller extends BaseController
                 ]
             ],
             [
-                "id" => 10,
+                "id" => 9,
                 "question" => "সেরা চলচ্চিত্র অভিনেতা বিভাগে কে সবচেয়ে বেশি পুরস্কার পেয়েছেন?",
                 "options" => [
                     "a" => "শাকিব খান",
@@ -130,7 +118,7 @@ class Controller extends BaseController
                 ]
             ],
             [
-                "id" => 11,
+                "id" => 10,
                 "question" => "মেরিল প্রথম আলো পুরস্কার ২০২২-এ সেরা চলচ্চিত্র পরিচালক পুরস্কার কে পেয়েছেন?",
                 "options" => [
                     "a" => "রায়হান রাফি",
@@ -140,7 +128,7 @@ class Controller extends BaseController
                 ]
             ],
             [
-                "id" => 12,
+                "id" => 11,
                 "question" => "সর্বাধিক টিভি অভিনেতা পুরস্কার কে পেয়েছেন?",
                 "options" => [
                     "a" => "চঞ্চল চৌধুরী",
@@ -150,13 +138,23 @@ class Controller extends BaseController
                 ]
             ],
             [
-                "id" => 13,
+                "id" => 12,
                 "question" => "প্রথম আসরে কে শ্রেষ্ঠ চলচ্চিত্র অভিনেতা পুরস্কার পেয়েছেন?",
                 "options" => [
                     "a" => "মান্না",
                     "b" => "আমিন খান",
                     "c" => "সালমান শাহ",
                     "d" => "রিয়াজ"
+                ]
+            ],
+            [
+                "id" => 13,
+                "question" => "মেরিল প্রথম আলো পুরস্কার ২০২৩-এ কত তম আসর অনুষ্ঠিত হতে যাচ্ছে?",
+                "options" => [
+                    "a" => "২২",
+                    "b" => "২৩",
+                    "c" => "২৪",
+                    "d" => "২৫"
                 ]
             ],
             [
@@ -171,7 +169,7 @@ class Controller extends BaseController
             ],
             [
                 "id" => 15,
-                "question" => "মেরিল প্রথম আলো পুরস্কার ২০১৬-এ কোন নাট্য নির্দেশক পুরস্কার পেয়েছেন?",
+                "question" => "মেরিল প্রথম আলো পুরস্কার ২০১৭-এ কোন নাট্য নির্দেশক পুরস্কার পেয়েছেন?",
                 "options" => [
                     "a" => "মিজানুর রহমান আরিয়ান",
                     "b" => "সাগর জাহান",
@@ -191,7 +189,9 @@ class Controller extends BaseController
         $selectedQuestions = array_merge([$fixedQuestion], $randomQuestions);
 
 
-        return view('frontend.new_index', compact('title', 'description', 'pageUrl', 'image', 'selectedQuestions'));
+
+
+        return view('frontend.new_index', compact('title', 'description', 'pageUrl', 'image','selectedQuestions'));
 
     }
 
@@ -199,19 +199,19 @@ class Controller extends BaseController
     {
         // সঠিক উত্তরগুলি সংরক্ষণ করা
         $correctAnswers = [
-            1 => '২৫',
-            2 => 'শাবনূর',
-            3 => 'এরফান মৃধা শিবলু',
-            4 => 'শাবনূর',
-            5 => 'ইত্যাদি',
-            6 => 'রুনা লায়লা ও সাবিনা ইয়াসমিন',
-            7 => 'সিয়াম আহমেদ ও প্রীতম হাসান',
-            8 => '১৯৯৮',
-            9 => 'শবনম ফারিয়া',
-            10 => 'শাকিব খান',
-            11 => 'মেজবাউর রহমান সুমন',
-            12 => 'মোশাররফ করিম',
-            13 => 'রিয়াজ',
+            1 => 'মেরিল মিল্ক সোপ',
+            2 => 'এরফান মৃধা শিবলু',
+            3 => 'শাবনূর',
+            4 => 'ইত্যাদি',
+            5 => 'রুনা লায়লা ও সাবিনা ইয়াসমিন',
+            6 => 'সিয়াম আহমেদ ও প্রীতম হাসান',
+            7 => '১৯৯২',
+            8 => 'শবনম ফারিয়া',
+            9 => 'শাকিব খান',
+            10 => 'মেজবাউর রহমান সুমন',
+            11 => 'মোশাররফ করিম',
+            12 => 'রিয়াজ',
+            13 => '২৫',
             14 => 'আফরান নিশো',
             15 => 'সাগর জাহান',
         ];
@@ -232,22 +232,12 @@ class Controller extends BaseController
             }
         }
 
-        $timeTaken = $request->input('time_taken');
-        if ($timeTaken >= 0 && $timeTaken <= 3) {
-            $timeTaken = 1000;
-        } elseif ($timeTaken >= 4 && $timeTaken <= 9) {
-            $timeTaken = 400;
-        } else {
-            $timeTaken = $request->input('time_taken');
-        }
-
-
         // Data save to database
         $applicant = new Applicant();
         $applicant->name = $request->input('name');
         $applicant->phone = $request->input('mobile');
         $applicant->total_marks = $totalMarks;
-        $applicant->time = $timeTaken;
+        $applicant->time = $request->input('time_taken');
 
         // Dynamically setting the answers and question IDs
         for ($i = 0; $i < 5; $i++) {
@@ -259,22 +249,26 @@ class Controller extends BaseController
             }
         }
 
-        // return $applicant;
+       // return $applicant;
 
         $applicant->save();
 
-        return redirect()->route('leaderBoard', $applicant->id);
+        return redirect()->route('leaderBoard',$applicant->id );
 
 
     }
 
 
+
+
+
+
     public function leaderBoard($id)
     {
-        if (!$id) {
+        if (!$id){
             return redirect()->route('home');
         }
-        $applicant = Applicant::find($id);
+        $applicant= Applicant::find($id);
 
         $leaders = Applicant::orderBy('total_marks', 'DESC')
             ->orderBy('time', 'ASC')
@@ -283,14 +277,13 @@ class Controller extends BaseController
         return view('frontend.leader', compact('applicant', 'leaders'));
 
     }
-
     public function urlRedirect($value)
     {
 
-        $image = '/certificates/' . $value . '_certificate.png';
+        $image= '/certificates/'.$value.'_certificate.png';
 
-        return \view('welcome', compact('image'));
-        // return redirect()->route('home');
+        return \view('welcome',compact('image'));
+       // return redirect()->route('home');
     }
 
     public function certificate()
@@ -349,7 +342,7 @@ class Controller extends BaseController
 
 
             // Save the certificate image with a dynamic name
-            $imageName = time() . '_certificate.png';
+            $imageName = time(). '_certificate.png';
             $template->save(public_path('certificates/' . $imageName));
             $request['file'] = 'certificates/' . $imageName;
 
