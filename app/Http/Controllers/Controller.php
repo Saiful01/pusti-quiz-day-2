@@ -233,11 +233,11 @@ class Controller extends BaseController
         }
 
         $timeTaken = $request->input('time_taken');
-        if ($timeTaken >= 0 && $timeTaken <= 3) {
+        if ($timeTaken >= 0 && $timeTaken <= 4) {
             $timeTaken = 1000;
-        } elseif ($timeTaken >= 4 && $timeTaken <= 9) {
+        } /*elseif ($timeTaken >= 4 && $timeTaken <= 9) {
             $timeTaken = 400;
-        } else {
+        }*/ else {
             $timeTaken = $request->input('time_taken');
         }
 
