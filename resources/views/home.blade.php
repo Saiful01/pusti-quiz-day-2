@@ -10,10 +10,12 @@
 
                 @php
 
-                    $applicants = \App\Models\Applicant::orderBy('total_marks', 'DESC')
+                    $applicants = \App\Models\Applicant::select('name', 'total_marks', 'time')
+            ->orderBy('total_marks', 'DESC')
             ->orderBy('time', 'ASC')
-
-            ->take(50)->get();
+            ->distinct('name')
+            ->take(50)
+            ->get();
                 @endphp
 
                 <div class="card-body">
@@ -33,12 +35,8 @@
                                     <table class=" table table-bordered table-striped table-hover datatable datatable-Applicant">
                                         <thead>
                                         <tr>
-                                            <th width="10">
 
-                                            </th>
-                                            <th>
-                                                {{ trans('cruds.applicant.fields.id') }}
-                                            </th>
+
                                             <th>
                                                 {{ trans('cruds.applicant.fields.name') }}
                                             </th>
@@ -58,12 +56,7 @@
                                         <tbody>
                                         @foreach($applicants as $key => $applicant)
                                             <tr data-entry-id="{{ $applicant->id }}">
-                                                <td>
 
-                                                </td>
-                                                <td>
-                                                    {{ $applicant->id ?? '' }}
-                                                </td>
                                                 <td>
                                                     {{ $applicant->name ?? '' }}
                                                 </td>

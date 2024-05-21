@@ -276,8 +276,10 @@ class Controller extends BaseController
         }
         $applicant = Applicant::find($id);
 
-        $leaders = Applicant::orderBy('total_marks', 'DESC')
+        $leaders = Applicant::select('name', 'total_marks', 'time')
+            ->orderBy('total_marks', 'DESC')
             ->orderBy('time', 'ASC')
+            ->distinct('name')
             ->take(10)
             ->get();
         return view('frontend.leader', compact('applicant', 'leaders'));
